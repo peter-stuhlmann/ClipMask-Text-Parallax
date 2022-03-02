@@ -49,6 +49,18 @@ const Main = styled.main`
 
 const Section = styled.section`
   ${baseStyles};
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+
+  & > div {
+    text-align: center;
+  }
 `;
 
 Container.propTypes = {
