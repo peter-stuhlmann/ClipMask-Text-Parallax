@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 // components
 import Container from '../components/Container';
+import Octocat from '../components/Octocat';
 
 // background images
 import fire from '../assets/img/fire.jpg';
@@ -40,13 +41,18 @@ export default function Home() {
     },
   ];
 
-  return elements.map((element) => (
-    <Container key={element.name}>
-      <Heading background={element.image}>{element.name}</Heading>
-      <Paragraph>{element.text}</Paragraph>
-      <Link to={element.href}>Read More</Link>
-    </Container>
-  ));
+  return (
+    <>
+      <Octocat url="https://github.com/peter-stuhlmann/ClipMask-Text-Parallax" />
+      {elements.map((element) => (
+        <Container key={element.name}>
+          <Heading background={element.image}>{element.name}</Heading>
+          <Paragraph>{element.text}</Paragraph>
+          <Link to={element.href}>Read More</Link>
+        </Container>
+      ))}
+    </>
+  );
 }
 
 const Heading = styled.h2`
