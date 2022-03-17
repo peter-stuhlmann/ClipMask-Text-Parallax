@@ -8,11 +8,11 @@
 ## How to run the app
 
 ```
-yarn install
+npm install
 ```
 
 ```
-yarn start
+npm start
 ```
 
 ## License
